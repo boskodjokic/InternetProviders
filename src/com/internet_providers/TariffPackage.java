@@ -51,15 +51,15 @@ public class TariffPackage {
         StringBuilder sb = new StringBuilder();
         sb.append("Tariff package: ").append(name);
         sb.append("\n");
-        sb.append("Speed: ").append(Integer.toString(speed));
+        sb.append("Speed: ").append((speed));
         sb.append("\n");
-        sb.append("Package price: ").append(Double.toString(packagePrice));
+        sb.append("Package price: ").append((packagePrice));
         sb.append("\n");
         sb.append("Unlimited traffic: ").append(unlimitedTraffic);
         sb.append("\n");
-        sb.append("Megabytes: ").append(Integer.toString(megabytes));
+        sb.append("Megabytes: ").append((megabytes));
         sb.append("\n");
-        sb.append("Price per MB: ").append(Double.toString(pricePerMb));
+        sb.append("Price per MB: ").append((pricePerMb));
         sb.append("\n");
 
         return sb.toString();

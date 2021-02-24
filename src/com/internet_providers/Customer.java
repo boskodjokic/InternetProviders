@@ -26,8 +26,8 @@ public abstract class Customer implements Listing {
         this.address = address;
         this.contractNum = contractNum;
         this.internetProvider = internetProvider;
-        this.listing = new ArrayList<ListingEntry>();
-        this.tariffAddOns = new ArrayList<TariffAddOn>();
+        this.listing = new ArrayList<>();
+        this.tariffAddOns = new ArrayList<>();
     }
 
     public abstract boolean surf(String url, int mb);
@@ -45,7 +45,7 @@ public abstract class Customer implements Listing {
         int oldMb = 0;
         int mbTotalPerUrl = entry.getMegabytes();
 
-        Map<String, Integer> urlMb = new HashMap<String, Integer>();
+        Map<String, Integer> urlMb = new HashMap<>();
         urlMb.put(entry.getUrl(), oldMb);
 
         for (int i = 0; i < sortedList.size(); i++) {
@@ -69,14 +69,14 @@ public abstract class Customer implements Listing {
         sb.append("Listing for user: ").append(this.name +" " + this.surname);
         sb.append("\n");
         while (i.hasNext()) {
-            Map.Entry<String, Integer> pair = (Entry<String, Integer>) i.next();
+            Map.Entry<String, Integer> pair = i.next();
             total += pair.getValue();
-            sb.append(pair.getKey()).append(" : ").append(Integer.toString(pair.getValue()));
+            sb.append(pair.getKey()).append(" : ").append((pair.getValue()));
             sb.append("\n");
         }
         sb.append("===================================");
         sb.append("\n");
-        sb.append("MB total: ").append(Integer.toString(total));
+        sb.append("MB total: ").append((total));
         sb.append("\n");
         sb.append("************************************");
         sb.append("\n");
@@ -137,7 +137,7 @@ public abstract class Customer implements Listing {
         sb.append("\n");
         sb.append("Address: ").append(address);
         sb.append("\n");
-        sb.append("Contract number: ").append(contractNum.toString());
+        sb.append("Contract number: ").append(contractNum);
         sb.append("\n");
         sb.append("Internet provider: ").append(this.getInternetProvider().getName());
         sb.append("\n");

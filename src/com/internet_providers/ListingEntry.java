@@ -27,6 +27,6 @@ public class ListingEntry implements Comparable<ListingEntry>{
     }
 
     public String toString(){
-        return "URL: " + this.url + ", megabajta: " + this.megabytes;
+        return "URL: " + this.url + ", megabytes: " + this.megabytes;
     }
 }

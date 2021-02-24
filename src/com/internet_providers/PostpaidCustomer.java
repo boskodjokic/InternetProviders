@@ -80,9 +80,9 @@ public class PostpaidCustomer extends Customer {
             sb.append("* ").append(addOn.getType()).append(" has price: ").append(addOn.getAddOnsprice());
             sb.append("\n");
         }
-        sb.append("Exceeding: ").append(Double.toString(exceeding));
+        sb.append("Exceeding: ").append((exceeding));
         sb.append("\n");
-        sb.append("Total for payment: ").append(Double.toString(this.totalForPayment()));
+        sb.append("Total for payment: ").append((this.totalForPayment()));
         sb.append("\n");
 
         return this.toString() + "\n" + sb.toString();

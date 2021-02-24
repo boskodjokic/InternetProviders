@@ -12,7 +12,7 @@ public class InternetProvider {
 
     public InternetProvider(String name) {
         this.name = name;
-        this.customers = new ArrayList<Customer>();
+        this.customers = new ArrayList<>();
     }
 
     public void generateInvoices() {
@@ -84,7 +84,7 @@ public class InternetProvider {
         sb.append("\n");
 
         for (int i = 0; i < customers.size(); i++) {
-            sb.append(Integer.toString(i));
+            sb.append(i);
             sb.append("\n");
             sb.append(customers.get(i).toString());
             sb.append("\n");
